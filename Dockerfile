@@ -1,8 +1,6 @@
 FROM       phusion/baseimage
 MAINTAINER Mickael Cassy <twitter@mickaelcassy>
 RUN        apt-get -y update
-#RUN        apt-get -y install apt-transport-https
-#RUN       apt-get -y install libssl1.0.0 ssl-cert openssl
 RUN        apt-get -y install python
 RUN        apt-get -y install python-cheetah
 RUN        apt-get -y install wget
