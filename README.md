@@ -4,7 +4,7 @@ docker-sickrage
 Create a docker that contains [sickrage][1] ready to use.  
 
 
-[Sickrage][1] will restart automatically when it crash or is shutted down through the web-interface.  
+[Sickrage][1] will restart automatically when it crash or is shutted down through the web interface.  
 
 
 The web interface has no user/password pre-configured. You will have to do it on your first connection.  
