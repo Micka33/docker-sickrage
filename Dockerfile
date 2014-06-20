@@ -12,12 +12,6 @@ RUN        wget https://github.com/echel0n/SickRage/archive/master.zip
 RUN        unzip master.zip -d .
 RUN        rm master.zip
 
-#WORKDIR    /etc/service
-#RUN        mkdir sickrage
-#ADD        sickrage.sh /etc/service/sickrage/run
-#RUN        chmod +x /etc/service/sickrage/run
-#RUN        echo "\nrunsvdir /etc/service &\n" >>  /etc/rc.local
-
 EXPOSE     8081
 
 #Just a little ping to keep the container alive
