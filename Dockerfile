@@ -12,12 +12,13 @@ RUN        wget https://github.com/echel0n/SickRage/archive/master.zip
 RUN        unzip master.zip -d .
 RUN        rm master.zip
 
-WORKDIR    /etc/service
-RUN        mkdir sickrage
-ADD        sickrage.sh /etc/service/sickrage/run
-RUN        chmod +x /etc/service/sickrage/run
-RUN        echo "\nrunsvdir /etc/service &\n" >>  /etc/rc.local
+#WORKDIR    /etc/service
+#RUN        mkdir sickrage
+#ADD        sickrage.sh /etc/service/sickrage/run
+#RUN        chmod +x /etc/service/sickrage/run
+#RUN        echo "\nrunsvdir /etc/service &\n" >>  /etc/rc.local
+
 EXPOSE     8081
 
 #Just a little ping to keep the container alive
-ENTRYPOINT ping -i 120 127.0.0.1
+ENTRYPOINT python /sickrage/SickRage-master/SickBeard.py >> /var/log/sickrage.log 2>&1
