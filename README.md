@@ -23,21 +23,20 @@ A bundle including sickrage/rtorrent, ready-to-use, is coming soon on Vagrant.
 ```
 
 
-##Check it will run
+##Check it's running
 
 
 ```
-> docker run micka33/sickrage /sbin/my_init -- sv s sickrage
-...
-*** Running sv s sickrage...
-run: sickrage: (pid 102) 0s
-...
+> docker top sickrage
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                15990               4331                0                   23:25               ?                   00:00:00            /bin/sh -c python /sickrage/SickRage-master/SickBeard.py >> /var/log/sickrage.log 2>&1 /sbin/my_init
+root                16012               15990               2                   23:25               ?                   00:00:02            python /sickrage/SickRage-master/SickBeard.py
 ```
 
 ##launch as deamon
 
 ```
-> docker run --name sickrage -d micka33/sickrage --port 127.0.0.1:8081:80
+> docker run --name sickrage -d -p 127.0.0.1:80:8081 micka33/sickrage
 ```
 
 
