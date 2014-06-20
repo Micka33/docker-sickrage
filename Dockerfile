@@ -17,7 +17,7 @@ RUN        mkdir sickrage
 ADD        sickrage.sh /etc/service/sickrage/run
 RUN        chmod +x /etc/service/sickrage/run
 RUN        echo "\nrunsvdir /etc/service &\n" >>  /etc/rc.local
-EXPOSE     8081
+#EXPOSE     8081
 
 #Just a little ping to keep the container alive
 ENTRYPOINT ping -i 120 127.0.0.1
