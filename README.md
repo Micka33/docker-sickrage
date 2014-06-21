@@ -36,7 +36,7 @@ root                16012               15990               2                   
 ##launch as deamon
 
 ```
-> docker run --name sickrage -d -p 127.0.0.1:80:8081 micka33/sickrage
+> docker run --name sickrage -d -p 0.0.0.0:80:8081 micka33/sickrage
 ```
 
 
