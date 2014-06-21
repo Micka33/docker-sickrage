@@ -14,5 +14,4 @@ RUN        rm master.zip
 
 EXPOSE     8081
 
-#Just a little ping to keep the container alive
 ENTRYPOINT python /sickrage/SickRage-master/SickBeard.py >> /var/log/sickrage.log 2>&1
